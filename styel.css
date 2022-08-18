@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #fff;
+  background: url(Header-bg.svg);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -41,16 +41,20 @@ nav {
 .logo {
   width: 72px;
   height: 20px;
-  font-family: sans-serif;
+  font-family: "poppins",sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 20px;
   color: #6070ff;
+  text-decoration: none;
+}
+.logo:hover{
+  color: black;
 }
 
 .typography h1 {
-  font-family: sans-serif;
+  font-family: "poppins", sans-serif;
   font-style: normal;
   font-weight: 70;
   font-size: 48px;
@@ -61,7 +65,7 @@ nav {
 }
 
 .typography p {
-  font-family: sans-serif;
+  font-family: "poppins",sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -70,7 +74,7 @@ nav {
 }
 
 .typography a {
-  font-family: sans-serif;
+  font-family: "poppins",sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -92,4 +96,16 @@ nav {
 
 img a:hover {
   color: #6070ff;
+}
+.img ul {
+list-style: none;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+padding-left: 0;
+}
+
+.img ul li{
+  display: inline-block;
+
 }
