@@ -2,7 +2,7 @@
 
 # Portfolio
 
-> The mobile first project
+> The mobile version portfolio
 
 
 ## Built With
