@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   box-sizing: border-box;
@@ -68,7 +68,7 @@ nav {
 }
 
 .typography p {
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
