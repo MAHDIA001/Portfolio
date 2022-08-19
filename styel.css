@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -41,7 +42,7 @@ nav {
 .logo {
   width: 72px;
   height: 20px;
-  font-family: poppins;
+  font-family: "poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
@@ -55,7 +56,7 @@ nav {
 }
 
 .typography h1 {
-  font-family: poppins;
+  font-family: "poppins", sans-serif;
   font-style: normal;
   font-weight: 70;
   font-size: 48px;
@@ -66,7 +67,7 @@ nav {
 }
 
 .typography p {
-  font-family: poppins;
+  font-family: "poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -75,7 +76,7 @@ nav {
 }
 
 .typography a {
-  font-family: poppins;
+  font-family: "poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
