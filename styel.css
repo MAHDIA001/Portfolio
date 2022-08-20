@@ -197,6 +197,11 @@ ul {
   color: #396df2;
 }
 
+.link a:hover{
+  color: #fff;
+  background-color: #396df2;
+}
+
 .skill-list {
   display: flex;
   flex-direction: column;
@@ -226,6 +231,10 @@ ul {
 .btn {
   display: flex;
   flex-direction: row;
+}
+
+.btn:hover {
+  color: #7a869a;
 }
 
 .btn img {
