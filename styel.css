@@ -44,8 +44,8 @@ section {
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 57px;
-  padding-bottom: 57px;
+  padding-top: 55px;
+  padding-bottom: 55px;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -188,7 +188,7 @@ ul {
   margin-top: 15px;
 }
 
-.link a {
+.link  {
   text-decoration: none;
   font-family: inherit;
   font-weight: 500;
@@ -201,13 +201,14 @@ ul {
   color: #396df2;
 }
 
-.link a:hover {
+.link:hover {
   color: #fff;
   background-color: #396df2;
 }
 
-.about{
+.about {
   border-top-right-radius: 60px;
+  margin-bottom: 20px;
 }
 
 .skill-list {
