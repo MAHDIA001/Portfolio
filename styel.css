@@ -44,7 +44,10 @@ section {
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 114px 24px;
+  padding-top: 57px;
+  padding-bottom: 57px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .intro {
@@ -182,6 +185,7 @@ ul {
   background: #fff;
   border: 1px solid #6070ff;
   border-radius: 16px;
+  margin-top: 15px;
 }
 
 .link a {
@@ -200,6 +204,10 @@ ul {
 .link a:hover {
   color: #fff;
   background-color: #396df2;
+}
+
+.about{
+  border-top-right-radius: 60px;
 }
 
 .skill-list {
@@ -261,6 +269,10 @@ ul {
   font-family: inherit;
   display: flex;
   align-items: center;
+}
+
+.js img {
+  margin: 10px 20px;
 }
 
 .frame {
