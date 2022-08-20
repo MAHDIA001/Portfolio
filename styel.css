@@ -44,8 +44,8 @@ section {
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 56px;
+  padding-bottom: 56px;
   padding-left: 24px;
   padding-right: 24px;
 }
