@@ -346,7 +346,7 @@ input {
   height: 50px;
   width: 270px;
   margin-top: 20px;
-  font-family: inherit;
+  font-family: "Poppins", sans-serif;
 }
 
 textarea {
