@@ -225,12 +225,14 @@
           Contact me
         </h2>
         <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
-        <div class="input-groups">
-          <input type="text" name="name" placeholder="Enter Your name">
-          <input type="text" name="email" placeholder="Enter your Email">
-        </div>
-        <textarea name="text" placeholder="Write your message here.." cols="30" rows="5"></textarea>
-       <button class="sub" type="submit">Get it Touch</button>
+        <form action="https://formspree.io/f/xzbwzdnn" method="post">
+          <fieldset>
+            <input type="text" name="name" placeholder="Mahdia" required>
+            <input type="email" name="email" placeholder="mahdia@gmail.com" required>
+            <textarea name="text" placeholder="Write your message here.." cols="30" rows="5" required></textarea>
+            <button class="sub" type="submit">Get it Touch</button>
+          </fieldset>
+        </form>
       </section>
     </div>
   </body>
