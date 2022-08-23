@@ -360,6 +360,7 @@ ul {
   align-items: center;
   text-align: center;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 .contact-me p {
@@ -368,6 +369,10 @@ ul {
   line-height: 28px;
   text-align: center;
   color: #ebebff;
+}
+
+fieldset {
+  border: none;
 }
 
 input {
@@ -379,11 +384,25 @@ input {
   line-height: 20px;
   align-items: center;
   color: #172b4d;
-  margin-left: 30px;
   height: 50px;
-  width: 270px;
+  width: 300px;
   margin-top: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+input::placeholder{
+height: 18px;
+padding-left: 16px;
+right: 38px;
+top: calc(50% - 18px/2);
+font-family: inherit;
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 20px;
+display: flex;
+align-items: center;
+color: #172B4D;
 }
 
 textarea {
@@ -395,9 +414,21 @@ textarea {
   line-height: 20px;
   align-items: center;
   color: #172b4d;
-  margin: 30px;
   margin-top: 20px;
   font-family: inherit;
+}
+
+textarea::placeholder{
+ font-family: inherit;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+color: #B3BAC5;
+padding-left: 16px;
+right: 38px;
+padding-top: 15px;
+bottom: 15px;
 }
 
 .sub {
@@ -411,10 +442,8 @@ textarea {
   color: #6070ff;
   font-family: inherit;
   padding: 15px;
-  margin-left: 30px;
-  border-radius: 10px;
-  padding-right: 0;
-  margin-right: 150px;
+  margin: 10px;
+  border-radius: 8px;
 }
 
 .sub:hover {
