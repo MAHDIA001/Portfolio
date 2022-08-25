@@ -138,6 +138,15 @@ ul {
   gap: 12px;
 }
 
+.cards img {
+  transition: transform .5s ease-in;
+  transition-delay: 0.2;
+}
+
+.cards img:hover {
+  transform: scale(1.2);
+}
+
 .section-1 {
   padding-top: 56px;
   padding-bottom: 56px;
@@ -392,6 +401,12 @@ ul {
   line-height: 28px;
   text-align: center;
   color: #ebebff;
+  transition: ease-out 0.5 transform;
+  transition-delay: 0.2s;
+}
+
+.contact-me p:hover {
+  transform: translate(30px);
 }
 
 fieldset {
@@ -453,6 +468,7 @@ textarea::placeholder {
   padding-top: 15px;
   bottom: 15px;
 }
+
 
 .sub {
   font-weight: 500;
