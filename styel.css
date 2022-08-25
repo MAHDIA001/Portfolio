@@ -143,8 +143,40 @@ ul {
   gap: 12px;
 }
 
+.btn img {
+  margin-left: 160px;
+}
+
+.js img {
+  margin: 10px 20px;
+}
+
+.frame img {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  width: 40px;
+  right: 40px;
+  top: calc(50% - 40px / 2);
+  border-radius: 8px;
+  margin-left: 160px;
+}
+
+.skills img {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  width: 40px;
+  right: 40px;
+  top: calc(50% - 40px / 2);
+  border-radius: 8px;
+  margin-left: 230px;
+}
+
 .cards img {
-  transition: transform .5s ease-in;
+  transition: transform 0.5s ease-in;
   transition-delay: 0.2;
 }
 
@@ -298,10 +330,6 @@ ul {
   color: #7a869a;
 }
 
-.btn img {
-  margin-left: 160px;
-}
-
 .lang-list {
   display: flex;
   flex-direction: column;
@@ -324,10 +352,6 @@ ul {
   align-items: center;
 }
 
-.js img {
-  margin: 10px 20px;
-}
-
 .frame {
   width: 327px;
   height: 72px;
@@ -339,18 +363,6 @@ ul {
   color: #000;
 }
 
-.frame img {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 8px;
-  width: 40px;
-  right: 40px;
-  top: calc(50% - 40px / 2);
-  border-radius: 8px;
-  margin-left: 160px;
-}
-
 .skills {
   width: 327px;
   height: 72px;
@@ -360,18 +372,6 @@ ul {
   display: flex;
   align-items: center;
   color: #000;
-}
-
-.skills img {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 8px;
-  width: 40px;
-  right: 40px;
-  top: calc(50% - 40px / 2);
-  border-radius: 8px;
-  margin-left: 230px;
 }
 
 .sep {
@@ -473,7 +473,6 @@ textarea::placeholder {
   padding-top: 15px;
   bottom: 15px;
 }
-
 
 .sub {
   font-weight: 500;
