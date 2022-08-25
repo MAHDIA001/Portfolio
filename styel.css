@@ -85,6 +85,11 @@ section {
   line-height: 52px;
   display: flex;
   align-items: center;
+  transition: ease-in-out transform 0.5;
+}
+
+.title:hover {
+  transform: rotateY(45deg);
 }
 
 .intro p {
