@@ -28,6 +28,18 @@ header {
   background-color: #fff;
 }
 
+.logo {
+  padding: 10px 12px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #6070ff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
 .nav-items {
   list-style: none;
   display: flex;
@@ -48,18 +60,6 @@ header {
   align-items: center;
   text-align: center;
   color: #344563;
-}
-
-.logo {
-  padding: 10px 12px;
-}
-
-.logo a {
-  text-decoration: none;
-  color: #6070ff;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
 }
 
 section {
@@ -549,14 +549,7 @@ textarea::placeholder {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  /* .tonic {
-     width: 100px;
-   } */
-
-  .projects {
-    /* padding-top: 48px; */
-    padding: 20px;
-  }
+  
   .projects h2 {
     font-weight: 700;
     font-size: 40px;
@@ -626,19 +619,12 @@ textarea::placeholder {
 
   .projects {
     order: 1;
+    padding: 20px;
   }
 
   .section-1 {
     display: flex;
     flex-flow: row;
-  }
-
-  .imgs {
-    order: 2;
-  }
-
-  .projects {
-    order: 1;
   }
 
   .lang-tags {
@@ -670,6 +656,11 @@ textarea::placeholder {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     margin-top: -200px;
+  }
+
+  .sec1 {
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .about h2 {
