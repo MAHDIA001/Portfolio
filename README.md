@@ -2,8 +2,9 @@
 
 # Portfolio
 
-> The mobile version portfolio
-
+> The  portfolio live demo
+ 
+ checkout the live demo 
 
 ## Built With
 
