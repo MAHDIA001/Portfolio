@@ -40,6 +40,22 @@ header {
   line-height: 20px;
 }
 
+.humburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  display: block;
+  -webkit-transition: ease-in-out all 0.3;
+  transition: ease-in-out all 0.3;
+  background: #6070ff;
+  border-radius: 2px;
+}
+
 .nav-items {
   list-style: none;
   display: flex;
@@ -48,6 +64,8 @@ header {
   height: 40px;
   gap: 40px;
   padding-right: 15px;
+  transition: transform 0.2s;
+  z-index: 99;
 }
 
 .nav-items li a {
@@ -800,9 +818,56 @@ textarea::placeholder {
 }
 
 @media (max-width: 768px) {
-  .nav-items {
-    display: none;
+  .humburger {
+    display: block;
   }
+
+  .humburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .humburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(8px, -6px);
+  }
+
+  .humburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -8px);
+  }
+
+  .nav-items {
+    margin-top: 0;
+    padding-top: 0;
+    position: fixed;
+    left: -100%;
+    gap: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: ease-in-out 0.3s;
+    background-color: #6070ff;
+   height: 100px;
+  }
+  .nav-items.active {
+    left: 0;
+    height: 50vh;
+  }
+  
+
+  .nav-items.active li a {
+    margin: 16px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    color: #fff;
+    text-align: left;
+    margin-left: -200px;
+  }
+
 
   #desktop {
     display: none;
