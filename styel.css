@@ -91,7 +91,7 @@ section {
 }
 
 .intro {
-  background-image: url(header-shapes.png);
+  background-image: url(./images/header-shapes.png);
   height: 604px;
   position: relative;
 }
@@ -402,7 +402,7 @@ ul {
 
 .contact-me {
   background: #6070ff;
-  background-image: url("shapes.png");
+  background-image: url("./images/shapes.png");
   background-repeat: no-repeat;
   background-position: 160px 40px;
   border-top-left-radius: 60px;
@@ -530,7 +530,7 @@ textarea::placeholder {
   }
 
   .intro {
-    background-image: url(header.png);
+    background-image: url(./images/header.png);
     background-repeat: no-repeat;
     height: auto;
     background-size: cover;
@@ -768,7 +768,7 @@ textarea::placeholder {
   }
 
   .contact-me {
-    background-image: url("contact.png");
+    background-image: url("./images/contact.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
