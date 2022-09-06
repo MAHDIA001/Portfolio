@@ -7,4 +7,4 @@ humburger.addEventListener('click', () => {
 document.querySelectorAll('.nav-item').forEach((n) => n.addEventListener('click', () => {
     humburger.classList.remove('active');
     nav.classList.remove('active');
-  }));
+}));
