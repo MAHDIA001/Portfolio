@@ -845,17 +845,23 @@ textarea::placeholder {
     list-style: none;
   }
 
-  .nav-items.active:nth-child(2) {
-    padding-top: 0;
-    margin: 0;
-  }
-
   .nav-items.active {
     padding-bottom: 300px;
     left: 0;
     width: 100%;
     margin-top: -8px;
-    opacity: 90px;
+    opacity: 100px;
+  }
+
+  .closebtn {
+    margin-top: -30px;
+    padding-right: -8px;
+    margin-right: -60px;
+  }
+
+  .nav-items.active:nth-child(2) {
+    padding-top: -20px;
+    margin-top: -30px;
   }
 
   .nav-items li a {
