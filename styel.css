@@ -828,10 +828,6 @@ textarea::placeholder {
     opacity: 0;
   }
 
-  .closebtn.active {
-    display: block;
-  }
-
   .nav-items {
     position: fixed;
     height: 100vh;
@@ -853,10 +849,15 @@ textarea::placeholder {
     opacity: 100px;
   }
 
+  .closebtn.active {
+    display: block;
+  }
+
   .closebtn {
     margin-top: -30px;
     padding-right: -8px;
-    margin-right: -60px;
+    margin-right: -500px;
+    margin-left: 500px;
   }
 
   .nav-items.active:nth-child(2) {
