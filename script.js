@@ -4,9 +4,7 @@ humburger.addEventListener('click', () => {
   humburger.classList.toggle('active');
   nav.classList.toggle('active');
 });
-document.querySelectorAll('.nav-item').forEach((n) =>
-  n.addEventListener('click', () => {
+document.querySelectorAll('.nav-item').forEach((n) => n.addEventListener('click', () => {
     humburger.classList.remove('active');
     nav.classList.remove('active');
   }));
-
