@@ -1,8 +1,16 @@
 window.onload=function(){
-const nav = document.querySelector('.nav-items')
-const humburger = document.querySelector('.humburger')
+const nav = document.querySelector('.nav-items');
+const humburger = document.querySelector('.humburger');
+const closebtn = document.querySelector('.closebtn');
  humburger.addEventListener('click',()=>{
-     humburger.classList.toggle('active')
+     humburger.classList.toggle('active');
      nav.classList.toggle("active");
- })
+ });
+
+ document.querySelectorAll('.nav-item').forEach((n) =>
+   n.addEventListener('click', () => {
+     humburger.classList.remove('active');
+     nav.classList.remove('active');
+   })
+ );
 }
