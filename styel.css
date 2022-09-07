@@ -91,7 +91,7 @@ section {
 }
 
 .intro {
-  background-image: url(header-shapes.png);
+  background-image: url(images/header-shapes.png);
   height: 604px;
   position: relative;
 }
@@ -142,7 +142,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px 12px;
+  padding: 4px;
   background: #ebebff;
   border-radius: 8px;
 }
@@ -220,22 +220,6 @@ ul {
 .section-4 {
   padding-top: 56px;
   padding-bottom: 56px;
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 0;
-  gap: 12px;
-}
-
-.project-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-  gap: 12px;
 }
 
 .project-title {
@@ -402,7 +386,7 @@ ul {
 
 .contact-me {
   background: #6070ff;
-  background-image: url("shapes.png");
+  background-image: url("images/shapes.png");
   background-repeat: no-repeat;
   background-position: 160px 40px;
   border-top-left-radius: 60px;
@@ -530,7 +514,7 @@ textarea::placeholder {
   }
 
   .intro {
-    background-image: url(header.png);
+    background-image: url(images/header.png);
     background-repeat: no-repeat;
     height: auto;
     background-size: cover;
@@ -595,6 +579,141 @@ textarea::placeholder {
     line-height: 20px;
     font-family: inherit;
   }
+
+  div.popup {
+    background: #fff;
+    border: 1px solid #ebecf0;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+    border-radius: 16px;
+    width: 100%;
+    visibility: hidden;
+    transform: translate(-50%,-50%) scale(0.1);
+    height: 0;
+    margin-bottom: 0;
+    margin: 0;
+  }
+
+  .main {
+    width: 95%;
+    margin: 20px;
+  }
+
+  .proj-title {
+    font-family: inherit;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .extra-info {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  .project {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #344563;
+    margin-left: 10px;
+  }
+
+  .proj-detials {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #7a869a;
+  }
+
+  .container-pop {
+   display: flex;
+  }
+
+  .detailsp {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 12px;
+  }
+
+  .popup-open {
+    visibility: visible;
+    margin: 10px;
+    height: auto;
+
+  }
+
+  .detail {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #344563;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+       width: 500px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 12px;
+    width: 306px;
+    height: 157px;
+    margin-top: 15px;
+  }
+
+  .lang-tagsp {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+.lang-tagsp li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  background: #ebebff;
+  border-radius: 8px;
+}
+
+.seelive, .source {
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 25px;
+gap: 10px;
+width: 142px;
+height: 40px;
+left: 5px;
+bottom: 16px;
+border: 1px solid #6070FF;
+border-radius: 8px;
+text-decoration: none;
+color: #396DF2;
+font-weight: 500;
+font-size: 15px;
+line-height: 20px
+}
+
+
+.images {
+  margin-top: 40px;
+  margin-left: 850px;
+
+}
+
 
   .desk {
     font-weight: 400;
@@ -661,7 +780,7 @@ textarea::placeholder {
 
   .lang-tags {
     gap: 8px;
-    width: 316px;
+    width: auto;
     height: 24px;
   }
 
@@ -768,7 +887,7 @@ textarea::placeholder {
   }
 
   .contact-me {
-    background-image: url("contact.png");
+    background-image: url("images/contact.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -846,7 +965,7 @@ textarea::placeholder {
     left: 0;
     width: 100%;
     margin-top: -8px;
-    opacity: 100px;
+    opacity: 90%;
   }
 
   .closebtn.active {
@@ -857,7 +976,6 @@ textarea::placeholder {
     margin-top: -30px;
     padding-right: -8px;
     margin-right: -500px;
-    margin-left: 500px;
   }
 
   .nav-items.active:nth-child(2) {
