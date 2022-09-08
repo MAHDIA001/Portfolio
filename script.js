@@ -152,7 +152,7 @@ for (let count = 0; count < projectBtn.length; count++) {
        modal.style.display = "flex";
        modal.style.visibility = "visible";
     modal.innerHTML = `<div class="popup-container">
-    <div class="cards">
+    <div class="cardspop">
       <div class="projects">
       <div class="project-section">
                     <h2 class="project-title">${proj[count].name}</h2>
@@ -166,9 +166,10 @@ for (let count = 0; count < projectBtn.length; count++) {
                 </div>
                  <img class= "popup-image"src="${proj[count].image[0]}">
                 </div>
-                <div class="detailsx">
+                <div class="detailsx" style="display: flex;">
                      <div class="left">          
-                <p class="details">${proj[count].paragraph}</p></div>
+                <p class="details">${proj[count].paragraph}</p>
+                </div>
                 <div class="right-block">
                 <ul class="lang-tags">
                     <li>${proj[count].technologies[0]}</li>
