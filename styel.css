@@ -126,6 +126,36 @@ section {
   font-family: inherit;
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 12px;
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 12px;
+}
+
+.job-title {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7a869a;
+}
+
+.details {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
 ul {
   list-style: none;
 }
@@ -160,6 +190,8 @@ ul {
   flex-direction: column;
   gap: 12px;
 }
+  
+
 
 .btn img {
   margin-left: 160px;
@@ -196,6 +228,10 @@ ul {
 .cards img {
   transition: transform 0.5s ease-in;
   transition-delay: 0.2;
+}
+
+.tonic {
+  width: 100%;
 }
 
 .cards img:hover {
@@ -566,6 +602,10 @@ textarea::placeholder {
     grid-template-columns: 1fr 1fr;
   }
 
+ .extra-info{
+   display: flex;
+ }
+
   .projects h2 {
     font-weight: 700;
     font-size: 40px;
@@ -759,15 +799,7 @@ line-height: 20px
     display: none;
   }
 
-  .section-3 {
-    display: flex;
-    flex-flow: row;
-  }
-
-  .imgs {
-    order: 2;
-  }
-
+ 
   .projects {
     order: 1;
     padding: 20px;
@@ -946,6 +978,8 @@ line-height: 20px
   .humburger.active .bar:nth-child(3) {
     opacity: 0;
   }
+ 
+
 
   .nav-items {
     position: fixed;
@@ -996,7 +1030,7 @@ line-height: 20px
     margin-left: -200px;
     padding: 0;
   }
-
+ 
   #desktop {
     display: none;
   }
