@@ -20,8 +20,8 @@ let proj = [
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
-    live: "https://mahdia001.github.io/Portfolio/",
-    source: "#",
+    live: "see live",
+    source: "see source",
   },
   {
     name: "Multi-Post Stories",
@@ -30,18 +30,18 @@ let proj = [
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
-    live: "https://mahdia001.github.io/Portfolio/",
-    source: "#",
+    live: "see live",
+    source: "see source",
   },
   {
     name: "Facebook 360",
     desc: ["Facebook", "images/Circle.svg", "Fullstack dev", "2015"],
-    image: ["images/Portfolio.png", "images/tonic.svg"],
+    image: ["images/Snapshoot-Portfolio.png", "images/tonic.svg"],
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
-    live: "#",
-    source: "#",
+    live: "see live",
+    source: "see source",
   },
   {
     name: "Uber Navigation",
@@ -50,8 +50,8 @@ let proj = [
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
-    live: "https://mahdia001.github.io/Portfolio/",
-    source: "#",
+    live: 'see live',
+    source: 'see source',
   },
 ];
 const projectContainer = document.querySelector(".works");
@@ -151,10 +151,12 @@ for (let count = 0; count < projectBtn.length; count++) {
   projectBtn[count].addEventListener("click", () => {
        modal.style.display = "flex";
        modal.style.visibility = "visible";
-    modal.innerHTML=
-      `<div class="popup-container">
+    modal.innerHTML = `<div class="popup-container">
+    <div class="cards">
+      <div class="projects">
+      <div class="project-section">
                     <h2 class="project-title">${proj[count].name}</h2>
-            
+                    <a href="" class="close"><img src="images/Icon.png"></a>
                     <div class="extra-info">
                         <p>${proj[count].desc[0]}</p>
                         <img src="${proj[count].desc[1]}">
@@ -162,9 +164,12 @@ for (let count = 0; count < projectBtn.length; count++) {
                         <img src="${proj[count].desc[1]}">
                         <p class="job-title">${proj[count].desc[3]}</p>
                 </div>
+                 <img class= "popup-image"src="${proj[count].image[0]}">
+                </div>
+                <div class="detailsx">
+                     <div class="left">          
+                <p class="details">${proj[count].paragraph}</p></div>
                 <div class="right-block">
-                                <div class="close1"><img src="${proj[count].image[0]}"></div>
-                <p class="details">${proj[count].paragraph}</p>
                 <ul class="lang-tags">
                     <li>${proj[count].technologies[0]}</li>
                     <li>${proj[count].technologies[1]}</li>
@@ -172,8 +177,10 @@ for (let count = 0; count < projectBtn.length; count++) {
                     <li>${proj[count].technologies[3]}</li>
                 </ul>
                 <hr>
-                <button  type="button" class="seelive">${proj[count].live}<img src="images/GitHub-Icon.png"></button>
-                <button  type="button" class="seelive">${proj[count].source}<img src="images/Icon.png"> </button>
+                <div class="buttons">
+                <button  type="button" class="seelive">${proj[count].live}<img src="images/Icon-GitHub.png"></button>
+                <button  type="button" class="seelive">${proj[count].source}<img src="images/Icon-Export.png"> </button>
+               </div>
                </div>
                 </div>
         </div>
@@ -181,7 +188,29 @@ for (let count = 0; count < projectBtn.length; count++) {
   `;
 
   });
+  const header = document.querySelector('.nav-container');
+  const intro = document.querySelector('.intro')
     projectBtn[count].addEventListener("click", () =>{
-      modal.style.display='none';
+      modal.style.dislay='block';
+      intro.style.display='none';
+      header.style.display='none';
     });
 }
+const close = document.querySelector('.close');
+close.addEventListener("click", () =>{
+  modal.style.display='none';
+   intro.style.display = "block";
+   header.style.display = "block";
+});
+
+
+// form validation
+const email = document.getElementsByName('email').value;
+const submit = document.querySelector('.sub');
+submit.addEventListener('click',()=>{
+if (email !== "/^[a-z0-9]+@[a-z0-9-]+.[a-z0-9-.]+$/") {
+  setCustomValidity("the email should be in lowercase letters");
+} else {
+  setCustomValidity("");
+}
+});
