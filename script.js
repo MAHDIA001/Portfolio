@@ -1,6 +1,6 @@
 const nav = document.querySelector(".nav-items");
 const humburger = document.querySelector(".humburger");
-const modal = document.querySelector('#pop');
+const modal = document.querySelector("#pop");
 humburger.addEventListener("click", () => {
   humburger.classList.toggle("active");
   nav.classList.toggle("active");
@@ -11,12 +11,12 @@ document.querySelectorAll(".nav-item").forEach((n) =>
     nav.classList.remove("active");
   })
 );
-  
+
 let proj = [
   {
     name: "Tonic",
     desc: ["Canopy", "images/Circle.svg", "Backend dev", "2015"],
-    image: ["images/cards.svg",'images/Snapshoot.svg'],
+    image: ["images/Portfolio.png", "images/Snapshoot.svg"],
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
@@ -26,7 +26,7 @@ let proj = [
   {
     name: "Multi-Post Stories",
     desc: ["Facebook", "images/Circle.svg", "Fullstack dev", "2015"],
-    image: ["images/multi.svg","images/multo.svg"],
+    image: ["images/multi.svg", "images/multo.svg"],
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
@@ -36,7 +36,7 @@ let proj = [
   {
     name: "Facebook 360",
     desc: ["Facebook", "images/Circle.svg", "Fullstack dev", "2015"],
-    image: ["images/cards.svg","images/tonic.svg"],
+    image: ["images/Portfolio.png", "images/tonic.svg"],
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
@@ -46,7 +46,7 @@ let proj = [
   {
     name: "Uber Navigation",
     desc: ["uber", "images/Circle.svg", "lead developer", "2018"],
-    image: ["images/Snapshoot.svg","images/multi.svg"],
+    image: ["images/Snapshoot.svg", "images/multi.svg"],
     paragraph:
       "A daily selection of privately personalized reads; no accounts or sign-ups required",
     technologies: ["html", "css", "javascript", "ruby", "bootstrap", "github"],
@@ -54,92 +54,134 @@ let proj = [
     source: "#",
   },
 ];
- const projectContainer = document.querySelector(".works");
-const createCards = (nameValue,descValue,imageValue,pValue,techValue,liveValue,sourceValue) => {
- const section = document.createElement("div");
-section.classList.add("section-4");
-projectContainer.appendChild(section);
-const cards = document.createElement("div");
-cards.classList.add("cards");
-section.appendChild(cards)
-const picture = document.createElement('picture');
-const source1 = document.createElement('source');
-const source2 = document.createElement("source");
-cards.appendChild(picture);
-picture.appendChild(source1);
-picture.appendChild(source2);
-const img = document.createElement("img");
-img.src = imageValue[0];
-img.classList.add("tonic");
-picture.appendChild(img);
-source1.media='(max-width:768px)';
-source1.srcset=imageValue[1];
-source2.media = "(max-width:768px)";
-source2.srcset = imageValue[1];
-const projects = document.createElement("div");
-projects.classList.add("projects");
-cards.appendChild(projects);
-const projectSection = document.createElement("div");
-projectSection.classList.add('project-section');
-projects.appendChild(projectSection);
-const paragraph = document.createElement('p');
-projects.appendChild(paragraph);
-paragraph.innerHTML=pValue;
-paragraph.classList.add('details');
-const ul = document.createElement('ul');
-ul.classList.add('lang-tags');
-projects.appendChild(ul);
-const li = document.createElement('li');
-li.innerHTML=techValue[0];
-ul.appendChild(li);
-const li2 = document.createElement('li');
-li2.innerHTML=techValue[1];
-ul.appendChild(li2);
-const li3 = document.createElement("li");
-li3.innerHTML = techValue[2];
-ul.appendChild(li3);
-const li4 = document.createElement("li");
-li4.innerHTML = techValue[3];
-ul.appendChild(li4);
-const projectTitle = document.createElement('h2');
-projectTitle.classList.add('project-title');
-projectTitle.innerHTML=nameValue;
-projectSection.appendChild(projectTitle);
-const extraInfo = document.createElement('div');
-extraInfo.classList.add('extra-info');
-projectSection.appendChild(extraInfo);
-const projectname = document.createElement('p');
-projectname.innerHTML=descValue[0];
-extraInfo.appendChild(projectname);
-const image = document.createElement("img");
-extraInfo.appendChild(image);
-image.src=descValue[1];
-const p1 = document.createElement('p');
-p1.classList.add('job-title');
-p1.innerHTML=descValue[2];
-extraInfo.appendChild(p1);
-const image1 = document.createElement('img');
-extraInfo.appendChild(image1);
-image1.src = descValue[1];
-const jobTitle = document.createElement('p');
-jobTitle.classList.add('job-title');
-jobTitle.innerHTML=descValue[3];
-extraInfo.appendChild(jobTitle);
-const button = document.createElement('button');
-button.type='submit';
-button.classList.add('link');
-button.innerHTML='see project';
-projects.appendChild(button);
-let counter =proj.length;
-if(counter%2===0){
-  cards.appendChild(picture);
-  cards.appendChild(projects);
-}else{
-  cards.appendChild(projects);
-  cards.appendChild(picture);
-}
-}
-  proj.forEach((p) => {
-  createCards(p.name,p.desc,p.image,p.paragraph,p.technologies,p.live,p.source); 
+const projectContainer = document.querySelector(".works");
+const createCards = (
+  nameValue,
+  descValue,
+  imageValue,
+  pValue,
+  techValue,
+  liveValue,
+  sourceValue,
+  count
+) => {
+  if (count === 0 || count % 2 === 0) {
+    projectContainer.innerHTML += `
+      <div class="section-4">
+        <div class="cards">
+            <picture>
+                <source media="(max-width:768px)" srcset="${imageValue[0]}">
+                <source media="(max-width:768px)" srcset="${imageValue[1]}">
+                <img src="${imageValue[0]}" class="tonic">
+            </picture>
+            <div class="projects">
+                <div class="project-section">
+                    <h2 class="project-title">${nameValue}</h2>
+                    <div class="extra-info">
+                        <p>${descValue[0]}</p>
+                        <img src="${descValue[1]}">
+                        <p class="job-title">${descValue[2]}</p>
+                        <img src="${descValue[1]}">
+                        <p class="job-title">${descValue[3]}</p>
+                    </div>
+                </div>
+                <p class="details">${pValue}</p>
+                <ul class="lang-tags">
+                    <li>${techValue[0]}</li>
+                    <li>${techValue[1]}</li>
+                    <li>${techValue[2]}</li>
+                    <li>${techValue[3]}</li>
+                </ul>
+                <button ${count} type="button" class="link project-btn">see project</button>
+            </div>
+        </div>
+      </div>
+  `;
+  } else {
+    projectContainer.innerHTML += `
+      <div class="section-4">
+        <div class="cards">
+            <div class="projects">
+                <div class="project-section">
+                    <h2 class="project-title">${nameValue}</h2>
+                    <div class="extra-info">
+                        <p>${descValue[0]}</p>
+                        <img src="${descValue[1]}">
+                        <p class="job-title">${descValue[2]}</p>
+                        <img src="${descValue[1]}">
+                        <p class="job-title">${descValue[3]}</p>
+                    </div>
+                </div>
+                <p class="details">${pValue}</p>
+                <ul class="lang-tags">
+                    <li>${techValue[0]}</li>
+                    <li>${techValue[1]}</li>
+                    <li>${techValue[2]}</li>
+                    <li>${techValue[3]}</li>
+                </ul>
+                <button id="${count}" type="button" class="link project-btn">see project</button>
+            </div>
+            <picture>
+                <source media="(max-width:768px)" srcset="${imageValue[0]}">
+                <source media="(max-width:768px)" srcset="${imageValue[1]}">
+                <img src="${imageValue[0]}" class="tonic">
+            </picture>
+        </div>
+      </div>
+  `;
+  }
+};
+
+proj.forEach((p, index) => {
+  createCards(
+    p.name,
+    p.desc,
+    p.image,
+    p.paragraph,
+    p.technologies,
+    p.live,
+    p.source,
+    index
+  );
 });
 
+const projectBtn = document.querySelectorAll(".project-btn");
+
+for (let count = 0; count < projectBtn.length; count++) {
+  projectBtn[count].addEventListener("click", () => {
+       modal.style.display = "flex";
+       modal.style.visibility = "visible";
+    modal.innerHTML=
+      `<div class="popup-container">
+                    <h2 class="project-title">${proj[count].name}</h2>
+            
+                    <div class="extra-info">
+                        <p>${proj[count].desc[0]}</p>
+                        <img src="${proj[count].desc[1]}">
+                        <p class="job-title">${proj[count].desc[2]}</p>
+                        <img src="${proj[count].desc[1]}">
+                        <p class="job-title">${proj[count].desc[3]}</p>
+                </div>
+                <div class="right-block">
+                                <div class="close1"><img src="${proj[count].image[0]}"></div>
+                <p class="details">${proj[count].paragraph}</p>
+                <ul class="lang-tags">
+                    <li>${proj[count].technologies[0]}</li>
+                    <li>${proj[count].technologies[1]}</li>
+                    <li>${proj[count].technologies[2]}</li>
+                    <li>${proj[count].technologies[3]}</li>
+                </ul>
+                <hr>
+                <button  type="button" class="seelive">${proj[count].live}<img src="images/GitHub-Icon.png"></button>
+                <button  type="button" class="seelive">${proj[count].source}<img src="images/Icon.png"> </button>
+               </div>
+                </div>
+        </div>
+      </div>
+  `;
+
+  });
+    projectBtn[count].addEventListener("click", () =>{
+      modal.style.display='none';
+    });
+}

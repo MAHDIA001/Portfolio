@@ -620,18 +620,6 @@ textarea::placeholder {
     font-family: inherit;
   }
 
-  div.popup {
-    background: #fff;
-    border: 1px solid #ebecf0;
-    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
-    border-radius: 16px;
-    width: 100%;
-    visibility: hidden;
-    transform: translate(-50%,-50%) scale(0.1);
-    height: 0;
-    margin-bottom: 0;
-    margin: 0;
-  }
 
   .main {
     width: 95%;
@@ -679,12 +667,7 @@ textarea::placeholder {
     gap: 12px;
   }
 
-  .popup-open {
-    visibility: visible;
-    margin: 10px;
-    height: auto;
-
-  }
+ 
 
   .detail {
     font-weight: 400;
@@ -801,7 +784,6 @@ line-height: 20px
 
  
   .projects {
-    order: 1;
     padding: 20px;
   }
 
@@ -979,8 +961,6 @@ line-height: 20px
     opacity: 0;
   }
  
-
-
   .nav-items {
     position: fixed;
     height: 100vh;
@@ -1002,16 +982,6 @@ line-height: 20px
     opacity: 90%;
   }
 
-  .closebtn.active {
-    display: block;
-  }
-
-  .closebtn {
-    margin-top: -30px;
-    padding-right: -8px;
-    margin-right: -500px;
-  }
-
   .nav-items.active:nth-child(2) {
     padding-top: -20px;
     margin-top: -30px;
@@ -1029,6 +999,10 @@ line-height: 20px
     text-align: left;
     margin-left: -200px;
     padding: 0;
+  }
+
+  .projects {
+    order: 2;
   }
  
   #desktop {
