@@ -408,6 +408,13 @@ ul {
   border-top-left-radius: 60px;
 }
 
+#text {
+  color: red;
+  font-size: 16px;
+  text-align: left;
+
+}
+
 .title-contact-me {
   font-weight: 700;
   font-size: 40px;
