@@ -17,5 +17,5 @@ submit.addEventListener('click', (e) => {
   if (email !== lowerCase) {
     e.preventDefault();
     document.querySelector('#text').innerHTML = 'error: email cannot be uppercase';
-}
+  }
 });
