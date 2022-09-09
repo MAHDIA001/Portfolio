@@ -14,8 +14,8 @@ const email = document.getElementById('mail');
 const lowerCase = email.value.toLowerCase();
 const submit = document.querySelector('.sub');
 submit.addEventListener('click', (e) => {
-if (email!== lowerCase) {
+  if (email !== lowerCase) {
     e.preventDefault();
-    document.querySelector('#text').innerHTML = 'error: email cannot be uppercase'
-};
+    document.querySelector('#text').innerHTML = 'error: email cannot be uppercase';
+}
 });
