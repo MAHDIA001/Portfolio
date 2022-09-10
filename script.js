@@ -24,14 +24,14 @@ submit.addEventListener('click', (e) => {
 const name = document.getElementById('name');
 const textarea = document.getElementById('textare');
 const form = document.getElementById('form');
-form.addEventListener('input', ()=> {
+form.addEventListener('input', () => {
   const nameobject = {
     firstName: `${name.value}`,
     emails: `${email.value}`,
     text: `${textarea.value}`,
- }; 
- localStorage.setItem('nameobject', JSON.stringify(nameobject));
- });
+  }; 
+localStorage.setItem('nameobject', JSON.stringify(nameobject));
+  });
 function getLocalStorage() {
   const newObj = JSON.parse(window.localStorage.getItem('nameobject'));
   name.value = newObj.firstName;
