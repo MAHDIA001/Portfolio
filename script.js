@@ -29,9 +29,9 @@ form.addEventListener('input', () => {
     firstName: `${name.value}`,
     emails: `${email.value}`,
     text: `${textarea.value}`,
-  }; 
-localStorage.setItem('nameobject', JSON.stringify(nameobject));
-  });
+}; 
+  localStorage.setItem('nameobject', JSON.stringify(nameobject));
+});
 function getLocalStorage() {
   const newObj = JSON.parse(window.localStorage.getItem('nameobject'));
   name.value = newObj.firstName;
