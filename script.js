@@ -26,9 +26,9 @@ const textarea = document.getElementById('textare');
 const form = document.getElementById('form');
 form.addEventListener('input', () => {
   const nameobject = {
-   firstName: `${name.value}`,
-   emails: `${email.value}`,
-   text: `${textarea.value}`,
+    firstName: `${name.value}`,
+    emails: `${email.value}`,
+    text: `${textarea.value}`,
   };
   localStorage.setItem('nameobject', JSON.stringify(nameobject));
 });
