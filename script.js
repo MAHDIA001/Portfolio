@@ -23,14 +23,15 @@ submit.addEventListener('click', (e) => {
 // local storage
 const name = document.getElementById('name');
 const textarea = document.getElementById('textare');
-function newData() {
+const form = document.getElementById('form');
+ form.addEventListener('input',()=> {
   const nameobject = {
     firstName: `${name.value}`,
     emails: `${email.value}`,
     text: `${textarea.value}`,
   }; 
- window.localStorage.setItem('nameobject', JSON.stringify(nameobject));
-}
+  localStorage.setItem('nameobject', JSON.stringify(nameobject));
+ });
 function getLocalStorage() {
   const newObj =JSON.parse(window.localStorage.getItem('nameobject'));
   name.value = newObj.firstName;
