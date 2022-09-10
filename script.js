@@ -29,7 +29,7 @@ form.addEventListener('input', () => {
     firstName: `${name.value}`,
     emails: `${email.value}`,
     text: `${textarea.value}`,
-}; 
+  }; 
   localStorage.setItem('nameobject', JSON.stringify(nameobject));
 });
 function getLocalStorage() {
