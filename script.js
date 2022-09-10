@@ -19,3 +19,21 @@ submit.addEventListener('click', (e) => {
     document.querySelector('#text').innerHTML = 'error: email cannot be uppercase';
   }
 });
+
+// local storage
+
+const name = document.getElementById('name')
+
+const textarea =  document.getElementById('textare')
+const newData = ()=> {
+  let nameobject = {
+    firstName: name.value,
+    emails: email.value,
+    text:textarea.value
+  }; 
+  window.localStorage.setItem("nameobject", JSON.stringify(nameobject));
+  let newObj = window.localStorage.getItem("nameobject");
+  JSON.parse(newObj);
+}
+
+

@@ -270,13 +270,13 @@
         <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
         <form>
           <fieldset>
-            <input type="text" name="name" placeholder="Mahdia" maxlength="30" required>
-            <input type="email" id="mail" name="email" placeholder="mahdia@gmail.com"  required>
-            <textarea name="text" placeholder="Write your message here.." cols="35" rows="5" maxlength="500" required></textarea>
+            <input type="text" id="name" name="name" onchange="newData()" placeholder="Mahdia" maxlength="30" required>
+            <input type="email" id="mail" name="email" onchange="newData()"  placeholder="mahdia@gmail.com"  required>
+            <textarea name="text" id="textare" onchange="newData()" placeholder="Write your message here.." cols="35" rows="5" maxlength="500" required></textarea>
            <p id="text"></p>
             <button class="sub"  type="submit">Get it Touch</button>
             <br>
-           
+           <p class="n"></p>
           </fieldset>
         </form>
         </div>
